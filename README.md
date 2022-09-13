@@ -5,11 +5,11 @@ I’ve been working on a chess program in c to help me study my openings for a c
 
 I came across an article about two months ago talking about teaching a c programming class using the original c-programming language book, published in the late 70s, by Kernighan and Ritchie. I bought the book, and I was ready to start a new project using code and examples from the book.  The examples in the book contain a unique style that focuses on brevity rather than simplicity. Many of the examples have while loops with assignments inside the conditional statement, rather than on a second line in the body of the loop. For loops have multiple initializations and incrementers and/or decrementers in a single line. Additionally, functions and variables of the same type are always declared on the same line.
 
-My first project is an accounting program that uses the basic styling of the c-programming language book. I was hoping to get the program down to 100 lines or less, but I have gone through it a few times, and any further shortening will break the style in ways that don’t feel true to the style of the book. At 138 lines, it is more than a simple function, but at the same time, it is not so big and unruly that it will be too hard to understand later.
+My first project is an accounting program that uses the basic styling of the c-programming language book. I was hoping to get the program down to 100 lines or less, but I have gone through it a few times, and any further shortening will break the style in ways that doesn’t feel true to the style of the book. At 138 lines, it is more than a simple function, but at the same time, it is not so big and unruly that it will be too hard to understand later.
 
 To use the program, first compile it:
 
-`gcc home.c`
+`gcc transaction.c`
 
 Then, write down all of your transactions for the month in the following format:
 
