@@ -50,6 +50,7 @@ struct ledger_obj c[], e[];
 	while((input[i][0][0])){
 		x = addledgerobj(c, last, 2, input[i][ACCT], input[i][AMT]);
 		y = addledgerobj(e, last, 4, input[i][ENT], input[i][AMT]);
+		/*printf("e[y].id: %d \t e[y].desc: %s \t e[y].amount %6.2f\n", e[y].id, e[y].desc, e[y].amount);*/
 		i++;
 	}
 	return;
@@ -133,6 +134,6 @@ struct ledger_obj ledger[];
 {
 	int i;
 	printf("\n--------\n%s:\n--------\n", title);
-	for(i=0;ledger[i].amount!=0; i++)
+	for(i=0;(ledger[i].desc[0]); i++)
 		printf("%s \t %6.2f\n", ledger[i].desc, ledger[i].amount);
 }

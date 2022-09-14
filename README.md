@@ -9,7 +9,7 @@ My first project is an accounting program that uses the basic styling of the c-p
 
 To use the program, first compile it:
 
-`gcc transaction.c`
+`gcc total.c`
 
 Then, write down all of your transactions for the month in the following format:
 
@@ -45,4 +45,12 @@ entities:
 --------
 CHECKING         1746.38
 ```
+As a method of validation, you can make sure all of your transactions add up to 0. Here is a simple awk script to add all your transactions:
 
+`awk -F'\t' '{sum+=$3;}END{print sum;}' input`
+
+Additionally, if you only want to add up the transactions for a single account, then use this awk script: 
+
+`awk -F'\t' '{if($5="CHECKING") sum+=$3;}END{print sum;}' input`
+
+The output should be: `1746.38` in both cases.
